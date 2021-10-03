@@ -77,9 +77,10 @@ async def subject(client,message):
         disable_web_page_preview=True,
         makeup = InlineKeyboardMarkup(subjectbtn)
       )
-    subjectbtn = [[
+    subjectbtn=[[
                       InlineKeyboardButton('Biology', url=f'https://t.me/bryllbots')
-        
+                 ],[
+                      InlineKeyboardButton('Physics', url=f'https://t.me/bryll_education,)
         ]]
 
 
