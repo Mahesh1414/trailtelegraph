@@ -1,7 +1,6 @@
 import os
 import logging
 from pyrogram import Client, filters
-from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 import datetime
 from pyrogram.errors import UserNotParticipant, ChatAdminRequired, UsernameNotOccupied
 from telegraph import upload_file
@@ -79,7 +78,7 @@ async def subject(client,message):
       )
 
 
-SUBJECT_BUTTON = InlineKeyboardMakeup(
+SUBJECT_BUTTON = InlineKeyboardMarkup(
                [[
                  InlineKeyboardButton('Biology', url=f'https://t.me/bryllbots')
                ]]
