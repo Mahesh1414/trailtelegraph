@@ -80,7 +80,7 @@ async def subject(client,message):
     subjectbtn=[[
                       InlineKeyboardButton('Biology', url=f'https://t.me/bryllbots')
                  ],[
-                      InlineKeyboardButton('Physics', url=f'https://t.me/bryll_education,)
+                      InlineKeyboardButton('Physics', url=f'https://t.me/bryll_education')
         ]]
 
 
