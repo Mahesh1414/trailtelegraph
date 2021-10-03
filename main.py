@@ -73,35 +73,21 @@ async def start(client, message):
         disable_web_page_preview=True
     )
 
-
-@tgraph.on_message(filters.photo)
-async def getimage(client, message):
-    dwn = await message.reply_text("Downloading to my server...", True)
-    img_path = await message.download()
-    await dwn.edit_text("Uploading as telegra.ph link...")
-    try:
-        url_path = upload_file(img_path)[0]
-    except Exception as error:
-        await dwn.edit_text(f"Oops something went wrong\n{error}")
-        return
-    await dwn.edit_text(
-        text=f"<b>Link :-</b> <code>https://telegra.ph{url_path}</code>",
+@tgraph.on_message(filters.command("subject"))
+async def subject(client,message):
+    await message.reply_text(
+        text=f"Hey! Choose the Subject",
         disable_web_page_preview=True,
-        reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton(
-                        text="Open Link", url=f"https://telegra.ph{url_path}"
-                    ),
-                    InlineKeyboardButton(
-                        text="Share Link",
-                        url=f"https://telegram.me/share/url?url=https://telegra.ph{url_path}",
-                    )
-                ]
-            ]
-        )
-    )
-    os.remove(img_path)
+        reply_makeup=InlineKeyboardMakeup(subjectbtn)
+      )
+    subjectbtn = [[
+                      InlineKeyboardButton('Biology', url=f'https://t.me/bryllbots')
+        ]
+        ]]
+
+
+
+
 
 
 tgraph.run()
