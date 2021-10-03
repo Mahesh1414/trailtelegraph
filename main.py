@@ -74,17 +74,16 @@ async def start(client, message):
 async def subject(client,message):
     await message.reply_text(
         text=f"Hey! Choose the Subject",
-        disable_web_page_preview=True,
-        makeup = InlineKeyboardMarkup(subjectbtn)
+        reply_makeup=SUBJECT_BUTTON,
+        disable_web_page_preview=True
       )
-    subjectbtn=[[
-                      InlineKeyboardButton('Biology', url=f'https://t.me/bryllbots')
-                 ],[
-                      InlineKeyboardButton('Physics', url=f'https://t.me/bryll_education')
-        ]]
 
 
-
+SUBJECT_BUTTON = InlineKeyboardMakeup(
+               [[
+                 InlineKeyboardButton('Biology', url=f'https://t.me/bryllbots')
+               ]]
+            )
 
 
 
