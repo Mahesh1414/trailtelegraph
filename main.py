@@ -41,19 +41,16 @@ async def force_sub(c, m):
 
         except ChatAdminRequired:
             logger.warning(f"Make me admin in @{Config.FORCE_SUB}")
-            if m.from_user.id in Config.AUTH_USERS:
-                return await m.reply_text(f"Make me admin in @{Config.FORCE_SUB}")
+            
 
         except UsernameNotOccupied:
             logger.warning("The forcesub username was Incorrect. Please give the correct username.")
-            if m.from_user.id in Config.AUTH_USERS:
-                return await m.reply_text("The forcesub username was Incorrect. Please give the correct username.")
+            
 
         except Exception as e:
             if "belongs to a user" in str(e):
                 logger.warning("Forcesub username must be a channel username Not yours or any other users username")
-                if m.from_user.id in Config.AUTH_USERS:
-                    return await m.reply_text("Forcesub username must be a channel username Not yours or any other users username")
+                
             logger.error(e)
             return await m.reply_text("Some thing went wrong. Try again and if same issue occur contact [our group](https://t.me/HxSupport)", disable_web_page_preview=True, quote=True)
 
