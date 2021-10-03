@@ -75,15 +75,15 @@ async def subject(client,update):
     await update.reply_text(
         text=f"Hey! Choose the Subject",
         disable_web_page_preview=True,
-        reply_makeup = SUBJECT_BUTTON
+        reply_makeup=InlineKeyboardMarkup(
+                   [[
+                        InlineKeyboardButton(
+                                  text="Biology",
+                                  url=f"https://t.me/bryll_helpdesk_bot",
+                         )
+                   ]]
+               )
       )
-
-
-SUBJECT_BUTTON = InlineKeyboardMarkup(
-               [[
-                 InlineKeyboardButton('Biology', url=f'https://t.me/bryllbots')
-               ]]
-            )
 
 
 
