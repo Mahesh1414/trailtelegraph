@@ -74,8 +74,8 @@ async def start(client, message):
 async def subject(client,message):
     await message.reply_text(
         text=f"Hey! Choose the Subject",
-        reply_makeup=SUBJECT_BUTTON,
-        disable_web_page_preview=True
+        disable_web_page_preview=True,
+        reply_makeup=SUBJECT_BUTTON
       )
 
 
