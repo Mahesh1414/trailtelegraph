@@ -75,7 +75,7 @@ async def subject(client,message):
     await message.reply_text(
         text=f"Hey! Choose the Subject",
         disable_web_page_preview=True,
-        makeup=InlineKeyboardMakeup(subjectbtn)
+        makeup = InlineKeyboardMakeup(subjectbtn)
       )
     subjectbtn = [[
                       InlineKeyboardButton('Biology', url=f'https://t.me/bryllbots')
