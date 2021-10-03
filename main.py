@@ -72,7 +72,7 @@ async def start(client, message):
 
 @tgraph.on_message(filters.command("subject"))
 async def subject(client,update):
-    await bot.send_message(
+    await client.send_message(
         text=f"Hey! Choose the Subject",
         disable_web_page_preview=True,
         reply_makeup=InlineKeyboardMarkup(
