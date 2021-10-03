@@ -71,7 +71,7 @@ async def start(client, message):
     )
 
 @tgraph.on_message(filters.command("subject"))
-async def subject(client,update):
+async def subject(client,message):
     await message.reply_text(
         text=f"Hey! Choose the Subject",
         disable_web_page_preview=True,
