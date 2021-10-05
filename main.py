@@ -81,7 +81,7 @@ async def subject(client,message):
 SUBJECT = [[
     InlineKeyboardButton('Biology', url=f'https://telegram.me/bryllbots')
     ],[
-    InlineKeyboardButto('Physics', url=f'https://telegram.me/bryllbots')
+    InlineKeyboardButton('Physics', url=f'https://telegram.me/bryllbots')
     ],[
     InlineKeyboardButton('Chemistry', url=f'https://telegram.me/bryllbots')
     ]]
