@@ -75,10 +75,10 @@ async def subject(client,message):
     await message.reply_text(
         text=f"Hey! Choose the Subject",
         disable_web_page_preview=True,
-        reply_markup=InlineKeyboardMarkup(SUBJECT)
+        reply_markup=InlineKeyboardMarkup(SUBJECT_BTN)
         )
 
-SUBJECT = [[
+SUBJECT_BTN = [[
     InlineKeyboardButton('Biology', url=f'https://telegram.me/bryllbots')
     ],[
     InlineKeyboardButton('Physics', url=f'https://telegram.me/bryllbots')
@@ -86,6 +86,14 @@ SUBJECT = [[
     InlineKeyboardButton('Chemistry', url=f'https://telegram.me/bryllbots')
     ]]
                         
+
+@tgraph.on_message(filters.command("biology"))
+async def biology (client,message):
+    await message.reply_text(
+        text=f"Hey! {message.from_user.mention} Choose the Chapter which you want to study",
+        disable_qeb_page_preview=True
+    )
+    
 
 
 
