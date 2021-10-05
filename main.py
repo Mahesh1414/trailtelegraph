@@ -88,7 +88,7 @@ SUBJECT_BTN = [[
                         
 
 @tgraph.on_message(filters.command("biology"))
-async def biology (client,message):
+async def biology(client,message):
     await message.reply_text(
         text=f"Hey! {message.from_user.mention} Choose the Chapter which you want to study",
         disable_web_page_preview=True,
@@ -104,7 +104,7 @@ BCHAPTER_BTN = [[
      ]]
 
 @tgraph.on_message(filter.command("physics"))
-async def physics (client,message):
+async def physics(client,message):
     await message.reply_text(
         text=f"Hey! {message.from_user.mention} Choose the Chapter which you want to study",
         disable_web_page_preview=True,
