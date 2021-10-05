@@ -120,13 +120,13 @@ PCHAPTER_BTN = [[
       ]]
 
 
-@tgraph.on_message(filter.command("chemistry"))
-async def chemistry(client.message):
+@tgraph.on_message(filters.command("chemistry"))
+async def chemistry(client,message):
     await message.reply_text(
         text=f"Hey! {message.from_user.mention} Choose the Chapter which you want to study",
         disable_web_page_preview=True,
         reply_markup=InlineKeyboardMarkup(CCHAPTER_BTN)
-      )
+    )
     
 CCHAPTER_BTN = [[
        InlineKeyboardButoon('Chapter 01', url=f'https://telegram.me/bryllbots')
