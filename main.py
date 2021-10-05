@@ -103,7 +103,7 @@ BCHAPTER_BTN = [[
      InlineKeyboardButton('Chapter 03', url=f'https://telegram.me/bryllbots')
      ]]
 
-@tgraph.on_message(filter.command("physics"))
+@tgraph.on_message(filters.command("physics"))
 async def physics(client,message):
     await message.reply_text(
         text=f"Hey! {message.from_user.mention} Choose the Chapter which you want to study",
