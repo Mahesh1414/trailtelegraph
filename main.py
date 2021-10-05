@@ -95,7 +95,7 @@ async def biology (client,message):
         reply_markup=InlineKeyboardMarkup(BCHAPTER_BTN)
     )
     
- BCHAPTER_BTN = [[
+BCHAPTER_BTN = [[
      InlineKeyboardButton('Chapter 01', url=f'https://telegram.me/bryllbots')
      ],[
      InlineKeyboardButton('Chapter 02', url=f'https://telegram.me/bryllbots')
@@ -111,7 +111,7 @@ async def physics (client,message):
         reply_markup=InlineKeyboardMarkup(PCHAPTER_BTN)
      )
     
-  PCHAPTER_BTN = [[
+PCHAPTER_BTN = [[
       InlineKeyboardButton('Chapter 01', url=f'https://telegram.me/bryllbots')
       ],[
       InlineKeyboardButton('Chapter 02', url=f'https://telegram.me/bryllbots')
@@ -128,7 +128,7 @@ async def chemistry (client.message):
         reply_markup=InlineKeyboardMarkup(CCHAPTER_BTN)
       )
     
-   CCHAPTER_BTN = [[
+CCHAPTER_BTN = [[
        InlineKeyboardButoon('Chapter 01', url=f'https://telegram.me/bryllbots')
        ],[
        InlineKeyboardButton('Chapter 02', url=f'https://telegram.me/beyllbots')
