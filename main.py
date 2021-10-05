@@ -128,7 +128,7 @@ async def chemistry (client.message):
         reply_markup=InlineKeyboardMarkup(CCHAPTER_BTN)
       )
     
-   CCHAPTER_BTN =[[
+   CCHAPTER_BTN = [[
        InlineKeyboardButoon('Chapter 01', url=f'https://telegram.me/bryllbots')
        ],[
        InlineKeyboardButton('Chapter 02', url=f'https://telegram.me/beyllbots')
