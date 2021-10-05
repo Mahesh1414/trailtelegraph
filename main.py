@@ -129,7 +129,7 @@ async def chemistry(client,message):
     )
     
 CCHAPTER_BTN = [[
-       InlineKeyboardButoon('Chapter 01', url=f'https://telegram.me/bryllbots')
+       InlineKeyboardButton('Chapter 01', url=f'https://telegram.me/bryllbots')
        ],[
        InlineKeyboardButton('Chapter 02', url=f'https://telegram.me/beyllbots')
        ],[
