@@ -121,7 +121,7 @@ PCHAPTER_BTN = [[
 
 
 @tgraph.on_message(filter.command("chemistry"))
-async def chemistry (client.message):
+async def chemistry(client.message):
     await message.reply_text(
         text=f"Hey! {message.from_user.mention} Choose the Chapter which you want to study",
         disable_web_page_preview=True,
