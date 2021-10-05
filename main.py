@@ -91,8 +91,50 @@ SUBJECT_BTN = [[
 async def biology (client,message):
     await message.reply_text(
         text=f"Hey! {message.from_user.mention} Choose the Chapter which you want to study",
-        disable_qeb_page_preview=True
+        disable_web_page_preview=True,
+        reply_markup=InlineKeyboardMarkup(BCHAPTER_BTN)
     )
+    
+ BCHAPTER_BTN = [[
+     InlineKeyboardButton('Chapter 01', url=f'https://telegram.me/bryllbots')
+     ],[
+     InlineKeyboardButton('Chapter 02', url=f'https://telegram.me/bryllbots')
+     ],[
+     InlineKeyboardButton('Chapter 03', url=f'https://telegram.me/bryllbots')
+     ]]
+
+@tgraph.on_message(filter.command("physics"))
+async def physics (client,message):
+    await message.reply_text(
+        text=f"Hey! {message.from_user.mention} Choose the Chapter which you want to study",
+        disable_web_page_preview=True,
+        reply_markup=InlineKeyboardMarkup(PCHAPTER_BTN)
+     )
+    
+  PCHAPTER_BTN = [[
+      InlineKeyboardButton('Chapter 01', url=f'https://telegram.me/bryllbots')
+      ],[
+      InlineKeyboardButton('Chapter 02', url=f'https://telegram.me/bryllbots')
+      ],[
+      InlineKeyboardButton('Chapter 03', url=f'https://telegram.me/bryllbots')
+      ]]
+
+
+@tgraph.on_message(filter.command("chemistry"))
+async def chemistry (client.message):
+    await message.reply_text(
+        text=f"Hey! {message.from_user.mention} Choose the Chapter which you want to study",
+        disable_web_page_preview=True,
+        reply_markup=InlineKeyboardMarkup(CCHAPTER_BTN)
+      )
+    
+   CCHAPTER_BTN =[[
+       InlineKeyboardButoon('Chapter 01', url=f'https://telegram.me/bryllbots')
+       ],[
+       InlineKeyboardButton('Chapter 02', url=f'https://telegram.me/beyllbots')
+       ],[
+       InlineKeyboardButton('Chapter 03', url=f'https://telegram.me/bryllbots')
+       ]]
     
 
 
