@@ -143,8 +143,8 @@ async def cd_handler(bot, update):
     if update.data =="biology":
         await update.message.edit_text(
             text=f"Hey! {message.from_user.mention} Choose the Chapter which you want to study in Biology",
+            disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(BCHAPTER_BTN)
-            disable_web_page_preview=True
           )
 
 tgraph.run()
