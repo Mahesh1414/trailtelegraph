@@ -146,4 +146,5 @@ async def cd_handler(bot, update):
             reply_markup=InlineKeyboardMarkup(BCHAPTER_BTN)
             disable_web_page_preview=True
           )
+
 tgraph.run()
