@@ -139,10 +139,10 @@ CCHAPTER_BTN = [[
 
 
 @tgraph.on_callback_query()
-async def cd_handler(bot, update, message):
+async def cd_handler(bot, update):
     if update.data =="biology":
         await update.message.edit_text(
-            text=f"Hey! {message.from_user.mention} Choose the Chapter which you want to study in Biology",
+            text=f"Hey! {update.from_user.mention} Choose the Chapter which you want to study in Biology",
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(BCHAPTER_BTN)
           )
