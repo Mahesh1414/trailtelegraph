@@ -152,7 +152,7 @@ async def cd_handler(bot, update):
 async def cd_handler(bot, update):
     if update.data =="physics":
         await update.message.edit_text(
-            text=f"Hey! {update.from_user.mention} Choose the Chapter which you want to study in Physics',
+            text=f"Hey! {update.from_user.mention} Choose the Chapter which you want to study in Physics",
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(PCHAPTER_BTN)
           )
