@@ -79,7 +79,7 @@ async def subject(client,message):
         )
 
 SUBJECT_BTN = [[
-    InlineKeyboardButton('Biology', url=f'https://telegram.me/bryllbots')
+    InlineKeyboardButton('Biology', callback_data='biology')
     ],[
     InlineKeyboardButton('Physics', url=f'https://telegram.me/bryllbots')
     ],[
@@ -138,5 +138,12 @@ CCHAPTER_BTN = [[
     
 
 
-
+@tgraph.on_callback_query()
+async def cd_handler(bot, update):
+    if update.data =="biology":
+        await update.message.edit_text(
+            text=f"Hey! {message.from_user.mention} Choose the Chapter which you want to study in Biology",
+            reply_markup=InlineKeyboardMarkup(BCHAPTER_BTN)
+            disable_web_page_preview=True,
+          )
 tgraph.run()
