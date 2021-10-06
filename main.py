@@ -144,6 +144,6 @@ async def cd_handler(bot, update):
         await update.message.edit_text(
             text=f"Hey! {message.from_user.mention} Choose the Chapter which you want to study in Biology",
             reply_markup=InlineKeyboardMarkup(BCHAPTER_BTN)
-            disable_web_page_preview=True,
+            disable_web_page_preview=True
           )
 tgraph.run()
