@@ -87,7 +87,7 @@ SUBJECT_BTN = [[
     ],[
     InlineKeyboardButton('Physics', callback_data='physics_cd')
     ],[
-    InlineKeyboardButton('Chemistry', url=f'https://telegram.me/bryllbots')
+    InlineKeyboardButton('Chemistry', callback_data='chemistry_cd')
     ]]
                         
 
@@ -155,6 +155,15 @@ async def cd_handler(bot, update):
             text=f"Hey! {update.from_user.mention} Choose the Chapter which you want to study in Biology",
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(PCHAPTER_BTN)
+          )
+        
+@tgraph.on_callbacj_query()
+async def cd_handler(bot, update):
+    if update.data =="chemistry_cd":
+        await update.message.edit_text(
+            text=f"Hey! {update.from_user.mention} Choose the Chapter which you wany to study in Chemistry",
+            disable_web_page_preview=True,
+            reply_markup=InlineKeyboardMarkup(CCHAPTER_BTN)
           )
     
 tgraph.run()
