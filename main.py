@@ -157,7 +157,7 @@ async def cd_handler(bot, update):
         #    reply_markup=InlineKeyboardMarkup(PCHAPTER_BTN)
        #   )
         
-@tgraph.on_callbacj_query()
+@tgraph.on_callback_query()
 async def cd_handler(bot, update):
     if update.data =="chemistry_cd":
         await update.message.edit_text(
