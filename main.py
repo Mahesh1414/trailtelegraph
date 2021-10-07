@@ -146,7 +146,6 @@ async def cd_handler(bot, update):
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(BCHAPTER_BTN)
           )
-
 elif update.data =="physics_cd":
        await update.message.edit_text(
            text=f"Hey! {update.from_user.mention} Choose the Chapter which you want to study in Biology",
