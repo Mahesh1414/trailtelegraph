@@ -1,5 +1,10 @@
 import os
 import logging
+import time
+import string
+import traceback
+import aysncio
+import datetime 
 from pyrogram import Client, filters
 import datetime
 from pyrogram.errors import UserNotParticipant, ChatAdminRequired, UsernameNotOccupied
@@ -146,7 +151,7 @@ async def cd_handler(bot, update):
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(BCHAPTER_BTN)
           )
-      else update.data == "physics_cd":
+      elif update.data == "physics_cd":
         await update.message.edit_text(
             text=f"Hey! {update.from_user.mention} Choose the Chapter which you want to study in Biology",
             disable_web_page_preview=True,
