@@ -144,7 +144,7 @@ CCHAPTER_BTN = [[
 
 @tgraph.on_callback_query()
 async def cd_handler(bot, update):
-    if update.data =="biology_cd":
+    if update.data =="physics_cd":
         await update.message.edit_text(
             text=f"Hey! {update.from_user.mention} Choose the Chapter which you want to study in Biology",
             disable_web_page_preview=True,
