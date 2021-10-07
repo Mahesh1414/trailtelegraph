@@ -105,6 +105,8 @@ BCHAPTER_BTN = [[
      InlineKeyboardButton('Chapter 02', url=f'https://telegram.me/bryllbots')
      ],[
      InlineKeyboardButton('Chapter 03', url=f'https://telegram.me/bryllbots')
+     ],[
+     InlineKeyboardButton('Close❌', callback_data='close')
      ]]
 
 
@@ -116,6 +118,8 @@ async def cd_handler(bot, update):
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(BCHAPTER_BTN)
           )
+      elif update.data == "close":
+        await update.message.delete()
 
 @tgraph.on_message(filters.command("physics"))
 async def physics(client,message):
