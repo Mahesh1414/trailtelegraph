@@ -118,7 +118,9 @@ async def cd_handler(bot, update):
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(BCHAPTER_BTN)
           )
-      elif update.data == "close":
+@tgraph.on_callback_query()
+async def cd_handler(bot, update):
+    if update.data == "close":
         await update.message.delete()
 
 @tgraph.on_message(filters.command("physics"))
