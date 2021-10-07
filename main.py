@@ -118,8 +118,8 @@ BCHAPTER_BTN = [[
          #   disable_web_page_preview=True,
          #   reply_markup=InlineKeyboardMarkup(BCHAPTER_BTN)
          # )
-        elif update.data == "close":
-            await update.message.delete()
+      #  elif update.data == "close":
+     #       await update.message.delete()
 
 @tgraph.on_message(filters.command("physics"))
 async def physics(client,message):
