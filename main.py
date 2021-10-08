@@ -71,7 +71,7 @@ async def start(client, message):
     await message.reply_text(
         text=f"Hello {message.from_user.mention},\nI'm a telegram Education Bot From BRYLL EDUCATION bot by @bryllbots",
         disable_web_page_preview=True,
-        reply_markup=InlineKeyboardMakeup(START_BTN)
+        reply_markup=InlineKeyboardMarkup(START_BTN)
     )
 
 START_BTN = [[
