@@ -3,7 +3,6 @@ import logging
 import time
 import string
 import traceback
-
 from pyrogram import Client, filters
 import datetime
 from pyrogram.errors import UserNotParticipant, ChatAdminRequired, UsernameNotOccupied
@@ -70,9 +69,16 @@ async def force_sub(c, m):
 @tgraph.on_message(filters.command("start"))
 async def start(client, message):
     await message.reply_text(
-        text=f"Hello {message.from_user.mention},\nI'm a telegram to telegra.ph image uploader bot by @W4RR10R",
-        disable_web_page_preview=True
+        text=f"Hello {message.from_user.mention},\nI'm a telegram Education Bot From BRYLL EDUCATION bot by @bryllbots",
+        disable_web_page_preview=True,
+        reply_markup=InlineKeyboardMakeup(START_BTN)
     )
+
+START_BTN = [[
+     InlineKeyboardButton('Subjects', callback_data='subject_cd')
+     ],[
+     InlineKeyboardButton('❌ Close ✖', callback_data='close')
+     ]]
 
 @tgraph.on_message(filters.command("subject"))
 async def subject(client,message):
