@@ -80,7 +80,7 @@ START_BTN = [[
      InlineKeyboardButton('❌ Close ✖', callback_data='close')
      ]]
 
-@tgraph.on_message(filter.user(1852070029) & filters.command("subject"))
+@tgraph.on_message(filters.user(1852070029) & filters.command("subject"))
 async def subject(client,message):
     await message.reply_text(
         text=f"Hey! Choose the Subject",
