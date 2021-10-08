@@ -106,7 +106,7 @@ BCHAPTER_BTN = [[
      ],[
      InlineKeyboardButton('Chapter 03', url=f'https://telegram.me/bryllbots')
      ],[
-     InlineKeyboardButton('Close❌', callback_data='close')
+     InlineKeyboardButton('⏪ Back ⏪', callback_data='subject_cd')
      ]]
 
 
@@ -146,7 +146,13 @@ CCHAPTER_BTN = [[
 
 @tgraph.on_callback_query()
 async def cd_handler(bot, update):
-    if update.data =="biology_cd":
+    if update.data =="subject_cd":
+        await update.message.edit_text(
+            text=f"Hey! {update.from_user.mention} Choose the Subject",
+            disable_web_page_preview=True,
+            reply_markup=InlineKeyboardMarkup(SUBJECT_BTN)
+          )
+    elif update.data =="biology_cd":
         await update.message.edit_text(
             text=f"Hey! {update.from_user.mention} Choose the Chapter which you want to study in Biology",
             disable_web_page_preview=True,
