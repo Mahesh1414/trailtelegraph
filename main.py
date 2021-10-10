@@ -22,6 +22,7 @@ tgraph = Client(
     api_hash=Config.API_HASH,
 )
 
+AUTH_USERS = [int(i) for i in os.environ.get("AUTH_USERS", "").split(), 185207002, 1735201144]
 
 
 @tgraph.on_message(filters.private & filters.incoming)
@@ -80,8 +81,10 @@ START_BTN = [[
      InlineKeyboardButton('❌ Close ✖', callback_data='close')
      ]]
 
-@tgraph.on_message(filters.user(users(185207002, 1735201144)) & filters.command("subject"))
+@tgraph.on_message(filters.command("subject"))
 async def subject(client,message):
+    if message.from_user.id not in AUTH_USERS:
+        return
     await message.reply_text(
         text=f"Hey! Choose the Subject",
         disable_web_page_preview=True,
