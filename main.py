@@ -60,7 +60,7 @@ async def force_sub(c, m):
     elif message.text == "Updates Channel": await message.reply_text(f'@{Config.FORCE_SUB1}', reply_to_message_id=message.message_id)
     elif message.text == "Bryll EDU": await message.reply_text(f'@{Config.FORCE_SUB2}', reply_to_message_id=message.message_id)
     elif message.text == "Contact Our Helpdesk": await message.reply_text("@bryll_helpdesk_bot", reply_to_message_id=message.message_id)
-    elif message.text == "meee": await m.message.reply_text("this is meee you have to do /me to get your information")
+    elif message.text == "meee": await message.reply_text("this is meee you have to do /me to get your information")
 
     if Config.FORCE_SUB1 != "":
         try:
