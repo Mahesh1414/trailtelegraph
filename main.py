@@ -55,8 +55,13 @@ BCHAPTER_BTN = [
 
 @tgraph.on_message(filters.private & filters.incoming)
 async def force_sub(c, m):
+    message = m
+    if message.text == "BRYLL Bots Updates Channel": await message.reply_to_message("@bryllbots")
+    elif message.text == "Updates Channel": await message.reply_to_message(f'@{Config.FORCE_SUB1}')
+    elif message.text == "Bryll EDU": await message.reply_to_message(f'@{Config.FORCE_SUB2}')
+    elif message.text == "🔄 Refresh 🔄": await message.reply_to_message(callback_data='refresh')
+    elif message.text == "Contact Our Helpdesk": await message.reply_text("@bryll_helpdesk_bot")
 
-    print('forcesub')
     if Config.FORCE_SUB1 != "":
         try:
             chat = await c.get_chat_member(Config.FORCE_SUB1, m.from_user.id)
@@ -169,16 +174,6 @@ async def me(client,message):
 **User ID:-** <code>{message.from_user.id}</code>""",
         disable_web_page_preview=True,
       )
-
-
-@tgraph.on_message(filters.text)
-async def textHandler(client, message):
-    print(message.text)
-    if message.text == "BRYLL Bots Updates Channel": await message.reply_to_message("@bryllbots")
-    elif message.text == "Updates Channel": await message.reply_to_message(f'@{Config.FORCE_SUB1}')
-    elif message.text == "Bryll EDU": await message.reply_to_message(f'@{Config.FORCE_SUB2}')
-    elif message.text == "🔄 Refresh 🔄": await message.reply_to_message(callback_data='refresh')
-    elif message.text == "Contact Our Helpdesk": await message.reply_text("@bryll_helpdesk_bot")
 
 
 
