@@ -22,8 +22,8 @@ AUTH_USERS = [185207002, 1735201144, 1033516714, 1105888249, 800219239]
 start_keyboard = ReplyKeyboardMarkup([['🎓 Subjects 🎓', 'me']], resize_keyboard=True)
 
 force_sub_keyboard = ReplyKeyboardMarkup([
-     ['BRYLL Bots Updates Channel', 'Updates Channel'],
-     ['Bryll EDU', '🔄 Refresh 🔄']], resize_keyboard=True)
+     ['BRYLL Bots Updates Channel'],
+     ['Updates Channel', 'Bryll EDU']], resize_keyboard=True)
 
 
 premuim_pay_keyboard = ReplyKeyboardMarkup([['Contact Our Helpdesk']], resize_keyboard=True)
@@ -57,9 +57,8 @@ BCHAPTER_BTN = [
 async def force_sub(c, m):
     message = m
     if message.text == "BRYLL Bots Updates Channel": await message.reply_text("@bryllbots", reply_to_message_id=message.message_id)
-    elif message.text == "Updates Channel": await message.reply_texr(f'@{Config.FORCE_SUB1}', reply_to_message_id=message.message_id)
-    elif message.text == "Bryll EDU": await message.reply_to_message(f'@{Config.FORCE_SUB2}', reply_to_message_id=message.message_id)
-    elif message.text == "🔄 Refresh 🔄": await message.reply_to_message(callback_data='refresh')
+    elif message.text == "Updates Channel": await message.reply_text(f'@{Config.FORCE_SUB1}', reply_to_message_id=message.message_id)
+    elif message.text == "Bryll EDU": await message.reply_text(f'@{Config.FORCE_SUB2}', reply_to_message_id=message.message_id)
     elif message.text == "Contact Our Helpdesk": await message.reply_text("@bryll_helpdesk_bot", reply_to_message_id=message.message_id)
 
     if Config.FORCE_SUB1 != "":
