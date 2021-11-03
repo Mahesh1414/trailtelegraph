@@ -19,7 +19,7 @@ tgraph = Client(
 
 AUTH_USERS = [185207002, 1735201144, 1033516714, 1105888249, 800219239]
 
-start_keyboard = ReplyKeyboardMarkup([['🎓 Subjects 🎓']], resize_keyboard=True)
+start_keyboard = ReplyKeyboardMarkup([['🎓 Subjects 🎓', 'me']], resize_keyboard=True)
 
 force_sub_keyboard = ReplyKeyboardMarkup([
      ['BRYLL Bots Updates Channel', 'Updates Channel'],
@@ -160,7 +160,7 @@ async def chemistry(client,message):
     )
 
 
-@tgraph.on_message(filters.command("me"))
+@tgraph.on_message(filters.regex("me"))
 async def me(client,message):
     await message.reply_text(
         text=f"""**Your Details**
