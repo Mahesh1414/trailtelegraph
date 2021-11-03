@@ -1,0 +1,8 @@
+import os
+
+class Config:
+    BOT_TOKEN = os.getenv("BOT_TOKEN", "")
+    API_ID = int(os.getenv("API_ID", ""))
+    API_HASH = os.getenv("API_HASH", "")
+    FORCE_SUB1 = os.environ.get("FORCE_SUB", "bryllbots") if os.environ.get("FORCE_SUB") else print("please add the group/channel name in env in heroku")
+    FORCE_SUB2 = os.environ.get("FORCE_SUB", "tttt10101001") if os.environ.get("FORCE_SUB") else print("please add the group/channel name in env in heroku")
