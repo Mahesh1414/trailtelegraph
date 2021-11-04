@@ -17,7 +17,7 @@ tgraph = Client(
     api_hash=Config.API_HASH,
 )
 
-AUTH_USERS = [185207002, 1735201144, 1033516714, 1105888249, 800219239]
+AUTH_USERS = [185207002, 1033516714, 1105888249, 800219239]
 
 start_keyboard = ReplyKeyboardMarkup([['🎓 Subjects 🎓', 'start the bot']], resize_keyboard=True)
 
