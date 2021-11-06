@@ -213,23 +213,8 @@ async def cd_handler(bot, update):
     #      )
     
     elif update.data =="bch1_cd":
-        await update.message.edit_text(
-            text=f"""<b>Lakshya NEET Batch PW🎯🎯🎯
-Biology
-Microbes in Human Welfare
-Lecture 03
-Lecture🔰
-👉 https://d1d34p8vz63oiq.cloudfront.net/9eb5c7a1-611c-40ac-b7a8-d07dc56b5304/master.m3u8
-Class Notes🔰
-👉 https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/50c941fa-52bc-4714-9cc3-e1af8b86b590.pdf
-DPP🔰
-👉 https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/5b193fd6-9d46-4f43-80fe-530f4cd767e6.pdf
-🦧 Use @bryll_urluploader_bot to download Lecture. 🦦
-For any help contact💬 @bryll_helpdesk_bot</b>
-""",
-            disable_web_page_preview=True,
-            reply_markup=InlineKeyboardMarkup(BCHAPTER_BTN)
-          )
+        msg_content = await bot.get_messages(chat_id=-1001430997268, message_ids=2)
+        await msg_content.forward(chat_id=update.from_user.id)
     elif update.data =="refresh":
 
         try:
