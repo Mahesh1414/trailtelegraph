@@ -1,7 +1,7 @@
 import os, logging, time, string, traceback, datetime
 from pyrogram import Client, filters
 from pyrogram.errors import UserNotParticipant, ChatAdminRequired, UsernameNotOccupied
-from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, ReplyKeyboardMarkup
+from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, ReplyKeyboardMarkup, Message
 from Config import Config
 
 logging.basicConfig()
@@ -174,6 +174,13 @@ async def me(client,message):
 **User ID:-** <code>{message.from_user.id}</code>""",
         disable_web_page_preview=True,
       )
+
+msg_content = await Client.get_messages(chat_id=-1001430997268, message_ids=2) # the channel ID is -1001430997268
+
+@tgraph.on_message(filters.command("bio"))
+async def bio(client, message):
+    await msg_content.forward(chat_id=cb.from_user.id)
+    
 
 
 
