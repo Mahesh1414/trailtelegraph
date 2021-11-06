@@ -179,7 +179,7 @@ async def me(client,message):
 
 @tgraph.on_message(filters.command("bio"))
 async def bio(client, message):
-    await tgraph.forward_messages(chat_id=message.from_user.id, from_chat_id=-1001430997268, message_ids=2)
+    await tgraph.copy_messages(chat_id=message.from_user.id, from_chat_id=-1001430997268, message_ids=2)
     
 
 
