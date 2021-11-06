@@ -175,11 +175,11 @@ async def me(client,message):
         disable_web_page_preview=True,
       )
 
-msg_content = await Client.get_messages(chat_id=-1001430997268, message_ids=2) # the channel ID is -1001430997268
+
 
 @tgraph.on_message(filters.command("bio"))
 async def bio(client, message):
-    await msg_content.forward(chat_id=cb.from_user.id)
+    await Client.forward_messages(chat_id=message.from_user.id, from_chat_id=-1001430997268, message_ids=2)
     
 
 
